@@ -1,0 +1,34 @@
+{
+  "name": "Boombox Chrome Extension MV3",
+  "description": "boombox extension",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "icons": {
+      "16": "/images/chrome-icon48.png",
+      "32": "/images/chrome-icon48.png",
+      "48": "/images/chrome-icon48.png",
+      "128": "/images/chrome-icon48.png"
+  },
+  "background": {
+      "service_worker": "background.js"
+  },
+  "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+          "16": "/images/chrome-icon48.png",
+          "32": "/images/chrome-icon48.png",
+          "48": "/images/chrome-icon48.png",
+          "128": "/images/chrome-icon48.png"
+      }
+  },
+  "options_page": "options.html",
+  "permissions": [
+      "storage",
+      "activeTab",
+      "scripting",
+      "tabs"
+  ],
+  "host_permissions": [
+      "https://*/*"
+  ]
+}

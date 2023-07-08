@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Stereo from './stereo.js';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+     <Stereo />
+     <input type="text"></input>
+     <button>Funkadelic</button>
+     <button>Hip Hop</button>
+     <button>Focus</button>
+     <button>00s</button>
+     <button>90s</button>
+     <button>80s</button>
+     <button>70s</button>
+     <button>60s</button>
+    </>
+  
+  )
 }
 
 export default App;
