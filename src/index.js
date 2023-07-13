@@ -5,29 +5,7 @@ import App from "./App";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
-
-function MyForm() {
-  return (
-    <form>
-    <label>Chrome Extension - Total Request Live:
-      <div id="player">
-        <iframe id="inlineFrameExample" title="Inline Frame Example" width="300" height="200" src="https://www.youtube.com//embed/PL6AREfkbkLFYBnO1eoqMnk0fzhsO42S6S">
-        </iframe>
-      </div>
-
-      <p>Enter Artist Name</p>
-      <input label="name-artist" placeholder="Enter Artist Name" type="text"></input>
-      <button type="submit">Old Interviews</button>
-      <button type="submit">Funkadelic</button>
-      <button type="submit">Comdedy</button>
-      <button type="submit">Focus</button>
-    </label>
-  </form>
-   
-  )
-}
-
-root.render(<StrictMode><MyForm /></StrictMode>);
+root.render(<App />);
 
 var requestOptions = {
   method: 'GET',
