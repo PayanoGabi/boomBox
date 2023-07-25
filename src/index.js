@@ -12,7 +12,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://youtube.googleapis.com/youtube/v3/search?q=PL6AREfkbkLFYBnO1eoqMnk0fzhsO42S6S&key=AIzaSyC2wnUh9-JdRSTisOOQ4j4LKr1MCYU65U4&maxResults=45", requestOptions)
+fetch("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=48&playlistId=PL6AREfkbkLFYBnO1eoqMnk0fzhsO42S6S&key=AIzaSyC2wnUh9-JdRSTisOOQ4j4LKr1MCYU65U4", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
