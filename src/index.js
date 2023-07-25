@@ -5,6 +5,7 @@ import App from "./App";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
+var srcString;
 root.render(<App />);
 
 var requestOptions = {
@@ -21,7 +22,8 @@ fetch("https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2Cco
     data.forEach(element => {
       console.log(element.snippet.resourceId.videoId)
       const vidId = element.snippet.resourceId.videoId
-      const srcString = "https://www.youtube.com/embed/" + vidId
+      srcString = "https://www.youtube.com/embed/" + vidId;
+      console.log(srcString)
       
     });
     
@@ -34,13 +36,37 @@ tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-setTimeout(10000, checkit())
 
 
-var iframePlayer = document.querySelector("#player > iframe");
-console.log(iframePlayer)
-function checkit(){
-if(iframePlayer){
-  console.log('wazaa')
+const observer = new MutationObserver(list => {
+  var iframePlayer = document.querySelector(".trl-player")
+    if(iframePlayer){
+    console.log('hiiiiiiiiiii')
+    console.log(iframePlayer.src)
+    setTimeout(function(){
+      iframePlayer.src = srcString
+    },9000)
+
+        stopObserving()
+     
+    }
+    
+});
+  observer.observe(document.body, {
+    attributes: true,
+    childList: true,
+    subtree: true
+});
+
+function stopObserving(){
+    observer.disconnect();    
 }
-}
+
+
+// setTimeout(function(){
+//   var iframePlayer = document.querySelector(".trl-player")
+//   console.log(iframePlayer)
+
+//   alert("Sup!"); 
+
+// }, 9000);
