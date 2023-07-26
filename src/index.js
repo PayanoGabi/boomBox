@@ -37,7 +37,6 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
-
 const observer = new MutationObserver(list => {
   var iframePlayer = document.querySelector(".trl-player")
     if(iframePlayer){
@@ -63,10 +62,3 @@ function stopObserving(){
 }
 
 
-// setTimeout(function(){
-//   var iframePlayer = document.querySelector(".trl-player")
-//   console.log(iframePlayer)
-
-//   alert("Sup!"); 
-
-// }, 9000);
