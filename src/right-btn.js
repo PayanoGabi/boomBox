@@ -5,7 +5,7 @@ export default function RightBtn(){
         console.log('jumbalya')
     };
     return(
-        <div id="player">
+        <div id="nextBtn">
             <button type="button" onClick={handleNext}> Next</button>
       </div>
     )

@@ -5,7 +5,7 @@ export default function LeftBtn(){
         console.log('jumbalya')
     };
     return(
-        <div id="player">
+        <div id="backBtn">
             <button type="button" onClick={handleBack}> Back</button>
       </div>
     )
