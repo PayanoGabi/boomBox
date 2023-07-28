@@ -6,6 +6,7 @@ import TrlPlayer from './trl-player.js';
 import RightBtn from './right-btn.js';
 import LeftBtn from './left-btn.js';
 import { findByLabelText } from '@testing-library/react';
+import HandleFetch from './fetch.js';
 
 const mystyle = {
   color: "white",
@@ -36,6 +37,7 @@ function App() {
       </div>
       <div className="main">
       <React.StrictMode>
+        <HandleFetch/>
         <Stereo />
         <Player />
         <Stereo />

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function RightBtn(){
     const handleNext = () => {
-        console.log('jumbalya')
+        console.log('gumbo')
     };
     return(
         <div id="nextBtn">
